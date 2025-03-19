@@ -14,7 +14,7 @@
       <ul class="navbar-box">
         <li class="navbar-item"><a href="#">Blog</a></li>
         <li class="navbar-item"><a href="#">Eventi</a></li>
-        <li class="navbar-item"><a href="#">Login</a></li>
+        <li class="navbar-item"><a href="#"><button class="btn-login">Login</button></a></li>
       </ul>
     </header>
     <section class="hero-box">
@@ -26,9 +26,9 @@
       </div>
     </section>
     <main>
-      
-        <h2 class="heading-section">Eventi vicini a te</h2>
-        <section class="events-box nearby">
+      <!-- NELLE VICINANZE! -->
+      <section class="events-box nearby">
+          <h2 class="heading-section">Eventi vicini a te</h2>
         <article class="events-card">
           <h4 class="events-card-heading">Festa del quartiere a Milano</h4>
           <div class="events-card-info-box">
@@ -49,16 +49,127 @@
             reprehenderit neque error, numquam omnis.
           </p>
           <div class="interactions-box">
-            <img
+            <div class="interactions">
+              <img
               class="icon-star"
               src="assets/svg/star-svgrepo-com.svg"
               alt=""
             />
             <span>100</span>
+            </div>
+            <div class="user-box"><img class="icon-user" src="./assets/svg/reshot-icon-user-86W3QYEK5P.svg" alt="user icon"><span>Jacopo</span></div>
             <span class="more-info"><a href="#">>>più informazioni</a></span>
           </div>
         </article>
+        <article class="events-card">
+          <h4 class="events-card-heading">Party Techno a Monza</h4>
+          <div class="events-card-info-box">
+              <img
+                class="icon-place"
+                src="./assets/svg/place-svgrepo-com.svg"
+                alt="place icon"
+              />
+              <span class="info-place">Monza, via prova, 1</span>
+              <span class="info-date">domani dalle 23.30</span>
+            </div>
+          </div>
+          <img src="./assets/images/disco.jpg" alt="immagine dell'evento del quartiere con un ragazzo sullo skateboard">
+          <p class="events-card-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            repudiandae labore perspiciatis repellat ipsa tenetur sed, rerum
+            distinctio voluptas quas. Et delectus esse voluptate nostrum
+            reprehenderit neque error, numquam omnis.
+          </p>
+
+          <div class="interactions-box">
+            <div class="interactions">
+              <img
+              class="icon-star"
+              src="assets/svg/star-svgrepo-com.svg"
+              alt="icona che rappresenta una stella con le interazioni"
+            />
+            <span>100+</span>
+            </div>
+            
+            <div class="user-box"><img class="icon-user" src="./assets/svg/reshot-icon-user-86W3QYEK5P.svg" alt="user icon"><span>Jacopo</span></div>
+          <span class="more-info"><a href="#">>>più informazioni</a></span>
+          </div>
+        </article>
+        <article class="events-card">
+          <h4 class="events-card-heading">Inaugurazione Locale "Jacopo food"</h4>
+          <div class="events-card-info-box">
+              <img
+                class="icon-place"
+                src="./assets/svg/place-svgrepo-com.svg"
+                alt="place icon"
+              />
+              <span class="info-place">Milano, via test, 45</span>
+              <span class="info-date">stasera dalle 19.30</span>
+            </div>
+          </div>
+          <img src="./assets/images/local.jpg" alt="immagine dell'evento del quartiere con un ragazzo sullo skateboard">
+          <p class="events-card-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            repudiandae labore perspiciatis repellat ipsa tenetur sed, rerum
+            distinctio voluptas quas. Et delectus esse voluptate nostrum
+            reprehenderit neque error, numquam omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia mollitia totam ipsam reprehenderit molestias? Quibusdam tenetur quae, velit nisi earum reprehenderit officiis? Voluptatibus repellendus beatae id ipsa, laboriosam officiis ea?
+          </p>
+          <div class="interactions-box">
+            <div class="interactions">
+            <img
+              class="icon-star"
+              src="assets/svg/star-svgrepo-com.svg"
+              alt="icona che rappresenta una stella con le interazioni"
+            />
+            <span>100+</span>
+          </div>
+            <div class="user-box"><img class="icon-user" src="./assets/svg/reshot-icon-user-86W3QYEK5P.svg" alt="user icon"><span>Jacopo</span></div>
+          <span class="more-info"><a href="#">>>più informazioni</a></span>
+          </div>
+        </article>
+        <article class="events-card">
+          <h4 class="events-card-heading">Presentazione libro "Libro"</h4>
+          <div class="events-card-info-box">
+              <img
+                class="icon-place"
+                src="./assets/svg/place-svgrepo-com.svg"
+                alt="place icon"
+              />
+              <span class="info-place">Milano, via rossi, 66</span>
+              <span class="info-date">sabato 22/03/2025</span>
+            </div>
+          </div>
+          <img src="./assets/images/book.jpg" alt="immagine dell'evento del quartiere con un ragazzo sullo skateboard">
+          <p class="events-card-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            repudiandae labore perspiciatis repellat ipsa tenetur sed, rerum
+            distinctio voluptas quas. Et delectus esse voluptate nostrum
+          </p>
+          <div class="interactions-box">
+            <div class="interactions">
+            <img
+              class="icon-star"
+              src="assets/svg/star-svgrepo-com.svg"
+              alt="icona che rappresenta una stella con le interazioni"
+            />
+            <span>44</span>
+          </div>
+            <div class="user-box"><img class="icon-user" src="./assets/svg/reshot-icon-user-86W3QYEK5P.svg" alt="user icon"><span>Jacopo</span></div>
+            <span class="more-info"><a href="#">>>più informazioni</a></span>
+          </div>
+        </article>
+        <button class="show-more-btn nearby">Mostra di più...<span></span></button>
       </section>
+    <!-- IN EVIDENZA! -->
+    <section class="events-box highlighted">
+      <h2 class="heading-section">In evidenza per te</h2>
+      <article class="highlighted-card">
+        <img src="./assets/images/concerto.jpg" alt="sfondo con concerto di un cantante famoso">
+        <div class="highlighted-icon"><img src="./assets/svg/fire-square-svgrepo-com.svg" alt="icona con fuoco per descrivere che è un evento in evidenza"><span>In Evidenza!</span></div>
+        <h3>Concerto cantante famoso</h3>
+
+      </article>
+  </section>
     </main>
     <footer>
       <div class="footer-social">
