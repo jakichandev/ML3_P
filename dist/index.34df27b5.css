@@ -4,7 +4,8 @@ html {
 }
 
 body {
-  font-optical-sizing: auto;
+  background-color: #ffe4e1;
+  margin: 0;
   font-family: Manrope, sans-serif;
   font-style: normal;
 }
@@ -17,14 +18,15 @@ header {
   justify-content: space-around;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 25px;
   display: flex;
 }
 
 .logo {
+  color: maroon;
   margin: 0;
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 2.8rem;
+  font-weight: bold;
 }
 
 ul.navbar-box {
@@ -43,10 +45,110 @@ li.navbar-item > a {
 }
 
 section.hero-box {
+  box-sizing: border-box;
   background-image: url("hero.03415da1.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 800px;
+  padding: 0;
+  display: flex;
+}
+
+div.hero-text-box {
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 80%;
+  display: flex;
+}
+
+h1.hero-heading {
+  color: #fff;
+  margin: 0;
+  font-size: 7rem;
+  font-weight: 800;
+}
+
+p.hero-description {
+  color: #fff;
+  font-size: 2rem;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2.heading-section {
+  color: maroon;
+  margin: 15px 0;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+section.events-box {
+  grid-template-rows: minmax(200px, auto);
+  grid-template-columns: repeat(5, 1fr);
+  display: grid;
+}
+
+article.events-card {
+  border: 2px solid salmon;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.3rem;
+  display: flow-root;
+  position: relative;
+}
+
+span.info-place {
+  color: maroon;
+  font-weight: 600;
+}
+
+article.events-card > h4:first-child {
+  margin: 0;
+  font-size: 2em;
+}
+
+div.events-card-info-box {
+  align-items: center;
+  gap: 3px;
+  display: flex;
+}
+
+article.events-card > img {
+  float: left;
+  width: 50%;
+  height: auto;
+  margin: 10px 16px 10px 0;
+}
+
+article.events-card > p {
+  margin: 0 0 20px;
+  font-size: 1.2em;
+  line-height: 1.1em;
+}
+
+.icon-place, .icon-star {
+  width: 28px;
+}
+
+div.interactions-box {
+  clear: left;
+  align-items: center;
+  margin-top: 4px;
+  display: flex;
+  position: absolute;
+  bottom: 3px;
+  left: 2px;
+}
+
+span.more-info {
+  margin-left: auto;
 }
 /*# sourceMappingURL=index.34df27b5.css.map */
