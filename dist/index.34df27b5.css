@@ -117,7 +117,7 @@ li.navbar-item > a > button.btn-login {
 
 section.hero-box {
   box-sizing: border-box;
-  filter: grayscale(70%);
+  filter: grayscale(90%);
   background-image: url("hero.03415da1.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -134,19 +134,22 @@ div.hero-text-box {
   box-sizing: border-box;
   flex-direction: column;
   width: 80%;
+  font-size: 7rem;
   display: flex;
 }
 
 h1.hero-heading {
   color: #fff;
+  text-shadow: 2px 5px 10px #000;
   margin: 0;
-  font-size: 7rem;
+  font-size: 1em;
   font-weight: 800;
+  line-height: 1em;
 }
 
 p.hero-description {
   color: #fff;
-  font-size: 2rem;
+  font-size: .4em;
 }
 
 main {
