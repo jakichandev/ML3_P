@@ -71,6 +71,46 @@ li.navbar-item > a > button.btn-login {
   font-size: 1em;
 }
 
+.toggler-menu {
+  cursor: pointer;
+  width: 45px;
+  height: 5px;
+  background-color: var(--txt-main-col);
+  border-radius: 5px;
+  position: relative;
+  display: none;
+  transition: transform visibility 400ms ease;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: var(--txt-main-col);
+    transform: translateY(-12px);
+    border-radius: 5px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: var(--txt-main-col);
+    transform: translateY(12px);
+    border-radius: 5px;
+  }
+  &:hover {
+    visibility: hidden;
+    &::after {
+      visibility: visible;
+      transform: rotate(-45deg);
+    }
+    &::before {
+      visibility: visible;
+      transform: rotate(45deg);
+    }
+  }
+}
+
 section.hero-box {
   background-image: url("../assets/images/hero.jpg");
   width: 100%;
@@ -441,6 +481,12 @@ div.footer-copyright {
 }
 
 @media screen and (max-width: 870px) {
+  ul.navbar-box {
+    display: none;
+  }
+  .toggler-menu {
+    display: block;
+  }
   h2.heading-section {
     grid-column: span 1;
   }
