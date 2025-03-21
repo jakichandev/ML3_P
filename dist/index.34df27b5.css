@@ -72,6 +72,7 @@ li.navbar-item > a > button.btn-login {
 
 section.hero-box {
   box-sizing: border-box;
+  filter: grayscale(70%);
   background-image: url("hero.03415da1.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -111,6 +112,7 @@ main {
 h2.heading-section {
   grid-column: 1 / 5;
   align-self: center;
+  width: 100%;
   font-size: 3.5rem;
   font-weight: 800;
 }
@@ -135,6 +137,7 @@ section.events-box.nearby > h2.heading-section {
 
 section.events-box.highlighted > h2.heading-section {
   color: var(--txt-highlight-col);
+  grid-column: 1 / 4;
 
   & :after {
     border-bottom-color: var(--txt-highlight-col);
@@ -183,11 +186,13 @@ article.events-card > h4:first-child {
   color: #fff;
   margin: 0;
   font-size: 2em;
+  line-height: 1em;
 }
 
 div.events-card-info-box {
   align-items: center;
   gap: 3px;
+  margin: 5px 0;
   display: flex;
 }
 
@@ -245,12 +250,14 @@ div.interactions, div.user-box {
 }
 
 section.events-box.highlighted {
-  grid-template-rows: minmax(100px, auto);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 4fr auto;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 article.highlighted-card {
-  height: 400px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   position: relative;
   overflow: hidden;
 }
@@ -273,7 +280,9 @@ article.highlighted-card > div.highlighted-icon {
 
 article.highlighted-card > img {
   z-index: 0;
-  width: 100%;
+  filter: brightness(40%);
+  width: auto;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -286,12 +295,90 @@ article.highlighted-card > div.highlighted-icon > img {
   margin-left: 4px;
 }
 
-article.highlighted-card > h3 {
-  color: var(--txt-highlight-col);
-  font-size: 3em;
+article.highlighted-card > div.highlighted-content-box {
+  z-index: 1;
+  margin: 18px;
   position: relative;
-  top: 50%;
-  left: 30px;
+}
+
+article.highlighted-card > div.highlighted-content-box > h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 2.8em;
+}
+
+article.highlighted-card > div.highlighted-content-box > button {
+  background-color: var(--txt-highlight-col);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+section.section-categories {
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 50px;
+  font-size: 2rem;
+  display: flex;
+}
+
+form.categories-search-box {
+  justify-content: center;
+  gap: 9px;
+  font-size: 1.3em;
+  display: inline-flex;
+
+  & > input[type="text"] {
+    color: var(--txt-main-col);
+    border: none;
+    border: var(--txt-main-col) 2px solid;
+    background-color: #0000;
+    border-radius: 8px;
+    padding: 4px 6px;
+    font-size: 1em;
+
+    &::placeholder {
+      color: #686767;
+      opacity: .8;
+      padding: 5px;
+    }
+
+    &:focus {
+      width: 50%;
+      transition: all .5s ease-out;
+    }
+  }
+
+  & > input[type="submit"] {
+    background-color: var(--txt-main-col);
+    color: var(--dark-secondary-col);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+article.categories-box {
+  justify-content: space-between;
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+}
+
+div.category-box {
+  background-color: #423f3f;
+  border-radius: 10px;
+  margin: 0 5px;
+  padding: 4px 15px;
+}
+
+footer {
+  background-color: var(--bg-main-col);
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px 4px;
+  display: flex;
 }
 
 @media screen and (width <= 1700px) {
@@ -319,6 +406,17 @@ article.highlighted-card > h3 {
 
   .show-more-btn {
     grid-column: 1 / 3;
+  }
+
+  article.categories-box {
+    flex-direction: column;
+    width: 80%;
+    margin: 5px auto;
+    display: flex;
+  }
+
+  div.category-box {
+    margin: 15px 4px 0 0;
   }
 }
 
