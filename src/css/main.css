@@ -153,6 +153,13 @@ main {
   margin: 0 auto;
 }
 
+section.events-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  gap: 20px;
+}
+
 h2.heading-section {
   font-size: 3.5rem;
   font-weight: 800;
@@ -192,13 +199,6 @@ section.events-box.nearby a {
 
 section.events-box.highlighted a {
   color: var(--txt-highlight-col);
-}
-
-section.events-box {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: minmax(100px, auto);
-  gap: 20px;
 }
 
 section.events-box.nearby > article.events-card {

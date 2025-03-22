@@ -157,6 +157,13 @@ main {
   margin: 0 auto;
 }
 
+section.events-box {
+  grid-template-rows: minmax(100px, auto);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  display: grid;
+}
+
 h2.heading-section {
   grid-column: 1 / span 4;
   align-self: center;
@@ -198,13 +205,6 @@ section.events-box.nearby a {
 
 section.events-box.highlighted a {
   color: var(--txt-highlight-col);
-}
-
-section.events-box {
-  grid-template-rows: minmax(100px, auto);
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  display: grid;
 }
 
 section.events-box.nearby > article.events-card {
