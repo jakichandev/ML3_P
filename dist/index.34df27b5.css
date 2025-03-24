@@ -158,14 +158,22 @@ main {
 }
 
 section.events-box {
-  grid-template-rows: minmax(100px, auto);
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
   display: grid;
+
+  &.nearby {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  &.highlighted {
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
 }
 
 h2.heading-section {
-  grid-column: 1 / span 4;
+  grid-column: span 4;
   align-self: center;
   width: 100%;
   font-size: 3.5rem;
@@ -297,12 +305,8 @@ div.interactions, div.user-box {
   font-size: 2em;
 }
 
-section.events-box.highlighted {
-  grid-template-rows: 1fr 4fr auto;
-  grid-template-columns: repeat(3, 1fr);
-}
-
 article.highlighted-card {
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -455,7 +459,9 @@ div.footer-copyright {
   }
 
   section.events-box {
-    grid-template-columns: repeat(3, 1fr);
+    &.nearby {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   .show-more-btn {
@@ -464,12 +470,23 @@ div.footer-copyright {
 }
 
 @media screen and (width <= 1300px) {
-  h2.heading-section {
-    grid-column: 1 / span 2;
-  }
-
   section.events-box {
-    grid-template-columns: repeat(2, 1fr);
+    &.nearby {
+      grid-template-columns: repeat(2, 1fr);
+
+      & h2.heading-section {
+        grid-column: span 2;
+      }
+    }
+
+    &.highlighted {
+      grid-template-rows: 1fr 3fr 3fr 3fr;
+      grid-template-columns: 1fr;
+
+      & h2.heading-section {
+        grid-column: 1;
+      }
+    }
   }
 
   .show-more-btn {
@@ -486,6 +503,11 @@ div.footer-copyright {
   div.category-box {
     margin: 15px 4px 0 0;
   }
+
+  article.highlighted-card > img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media screen and (width <= 870px) {
@@ -497,16 +519,12 @@ div.footer-copyright {
     display: block;
   }
 
-  h2.heading-section {
-    grid-column: span 1;
-  }
-
-  section.events-box {
+  section.events-box.nearby, section.events-box.highlighted {
     grid-template-columns: 1fr;
   }
 
-  .show-more-btn {
-    grid-column: span 1;
+  article.events-card {
+    grid-column: 1;
   }
 
   footer {
